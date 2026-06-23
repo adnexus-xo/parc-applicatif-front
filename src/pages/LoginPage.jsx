@@ -41,7 +41,7 @@ function LoginPage() {
 	
         {/* Logo */}
         <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold text-white flex justify-center mt-4">
+            <h1 className=" felx justify-center mt-4 text-3xl font-bold text-white flex justify-center mt-4">
             Parc<span className="text-[#FFD100]" >App</span>
             </h1>
         </div>
