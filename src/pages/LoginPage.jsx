@@ -47,7 +47,7 @@ function LoginPage() {
         </div>
 
         {/* Carte */}
-	        <div className="w-full max-w-md bg-white rounded-3xl shadow-sm border border-gray-100 p-12">
+	        <div className=" flex justify-center mt-4 w-full max-w-md bg-white rounded-3xl shadow-sm border border-gray-100 p-12">
 	          <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">Connexion</h2>
 	            <p className="text-gray-500 text-base mb-10 text-center">Connectez-vous à votre espace</p>
 	          {error && (
