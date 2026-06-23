@@ -37,7 +37,7 @@ function LoginPage() {
 <div style={{position: 'absolute', top: '50%', left: '25%', width: '200px', height: '200px', backgroundColor: '#FFD100', borderRadius: '50%', opacity: 0.5, zIndex: 1}}></div>
 <div style={{position: 'absolute', top: '25%', right: '25%', width: '150px', height: '150px', backgroundColor: '#FFD100', opacity: 0.5, transform: 'rotate(45deg)', zIndex: 1}}></div>
   {/* Contenu */}
-	<div className="w-full mx-auto relative z-10">
+	<div className="flex justify-center mt-4 w-full mx-auto relative z-10">
 	
         {/* Logo */}
         <div className="text-center mb-8">
@@ -47,7 +47,7 @@ function LoginPage() {
         </div>
 
         {/* Carte */}
-	        <div className=" flex justify-center mt-4 w-full max-w-md bg-white rounded-3xl shadow-sm border border-gray-100 p-12">
+	        <div className="w-full max-w-md bg-white rounded-3xl shadow-sm border border-gray-100 p-12">
 	          <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">Connexion</h2>
 	            <p className="text-gray-500 text-base mb-10 text-center">Connectez-vous à votre espace</p>
 	          {error && (
