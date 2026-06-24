@@ -22,7 +22,7 @@ function LandingPage() {
 
         {/* Phrase descriptive */}
         <h2 className="text-white/100 text-3xl mt-16 text-center whitespace-nowrap">
-          Votre solution de gestion du parc applicatif - suivez, analysez et optimisez vos applications en toute simplicité.
+          Suivez, analysez et optimisez vos applications en toute simplicité.
         </h2>
 
         {/* Bouton */}
