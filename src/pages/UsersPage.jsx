@@ -134,6 +134,7 @@ function UsersPage() {
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-50">
+            
             {utilisateurs.length === 0 ? (
               <tr>
                 <td colSpan={6} className="text-center py-10 text-gray-400 text-sm">
