@@ -21,18 +21,23 @@ function LoginPage() {
 	console.log("PAYLOAD ENVOYÉ:", JSON.stringify(payload));
 	console.log("FORM STATE:", form);
     
+	
+
 	try {
-  	const response = await api.post('/utilisateurs/login', {
-    email: form.email,
-    motDePasse: form.motDePasse
-  });
-  // ...
-} catch (error) {
-  console.log("ERREUR COMPLETE:", error);
-  console.log("ERREUR MESSAGE:", error.message);
-  console.log("ERREUR RESPONSE:", error.response);
-  alert("Erreur: " + error.message);
-}
+		const response = await api.post('/utilisateurs/login', {
+			email: form.email,
+			motDePasse: form.motDePasse
+		});
+		
+		// Sauvegarde les infos de l'utilisateur
+		localStorage.setItem('user', JSON.stringify(response.data));
+		
+		// Redirige vers le dashboard
+		navigate('/dashboard');
+		
+	} catch (error) {
+		setError('Email ou mot de passe incorrect');
+	}
   };
 
   return (
