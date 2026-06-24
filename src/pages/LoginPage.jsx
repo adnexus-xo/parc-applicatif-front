@@ -16,7 +16,7 @@ function LoginPage() {
 
 	const payload = {
       email: form.email,
-      password: form.motDePasse
+      motDePasse: form.motDePasse
     };
 	console.log("PAYLOAD ENVOYÉ:", JSON.stringify(payload));
 	console.log("FORM STATE:", form);
@@ -24,7 +24,7 @@ function LoginPage() {
 	try {
   	const response = await api.post('/utilisateurs/login', {
     email: form.email,
-    motDePasse: form.password
+    motDePasse: form.motDePasse
   });
   // ...
 } catch (error) {
