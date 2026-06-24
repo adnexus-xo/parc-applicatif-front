@@ -13,6 +13,11 @@ function LoginPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+	const payload = {
+      email: form.email,
+      password: form.motDePasse
+    };
     
 	try {
   const response = await api.post('/utilisateurs/login', {
