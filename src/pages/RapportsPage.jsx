@@ -79,7 +79,7 @@ function RapportsPage() {
     <div className="space-y-6">
       <div>
         <h1 className="flex justify-center mt-4 text-2xl font-bold text-gray-900">Rapports</h1>
-        <p className="text-[#0D1B6E] text-base mt-1 font-medium">
+        <p className="text-[#0D1B6E] text-2xl mt-1 font-medium">
           {isLecteur ? 'Consultez l\'inventaire des applications' : 'Consultez et exportez les données du parc applicatif'}
         </p>
       </div>
