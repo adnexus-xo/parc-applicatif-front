@@ -17,7 +17,7 @@ function LoginPage() {
 	try {
   const response = await api.post('/utilisateurs/login', {
     email: form.email,
-    motDePasse: form.motDePasse
+    motDePasse: form.password
   });
   // ...
 } catch (error) {
