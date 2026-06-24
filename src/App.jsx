@@ -18,8 +18,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/accueil" element={<LandingPage />} />
         <Route path="/login" element={<LoginPage />} />
-          <Route path="/accueil" element={<LandingPage />} />
         
         <Route path="/" element={
           <ProtectedRoute>
@@ -34,9 +34,10 @@ function App() {
           <Route path="utilisateurs" element={<AdminRoute><UsersPage /></AdminRoute>} />
           <Route path="applications/:id/edit" element={<ApplicationEditPage />} />
           <Route path="rapports" element={<RapportsPage />} />
-          <Route path="*" element={<Navigate to="/accueil" replace />} />
           <Route path="parametres" element={<ParametresPage />} />
         </Route>
+
+        <Route path="*" element={<Navigate to="/accueil" replace />} />
       </Routes>
     </BrowserRouter>
   );

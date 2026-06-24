@@ -24,7 +24,7 @@ function LoginPage() {
 		localStorage.setItem('user', JSON.stringify(response.data));
 		
 		// Redirige vers le dashboard
-		navigate('/dashboard');
+		navigate('/');
 		
 	} catch (error) {
 		setError('Email ou mot de passe incorrect');
