@@ -43,6 +43,7 @@ function LoginPage() {
 <div style={{position: 'absolute', bottom: 0, left: 0, width: '500px', height: '500px', backgroundColor: '#FFD100', borderRadius: '50%', opacity: 0.6, transform: 'translate(-50%, 50%)', zIndex: 1}}></div>
 <div style={{position: 'absolute', top: '50%', left: '25%', width: '200px', height: '200px', backgroundColor: '#FFD100', borderRadius: '50%', opacity: 0.5, zIndex: 1}}></div>
 <div style={{position: 'absolute', top: '25%', right: '25%', width: '150px', height: '150px', backgroundColor: '#FFD100', opacity: 0.5, transform: 'rotate(45deg)', zIndex: 1}}></div>
+
   {/* Contenu */}
 	<div className="flex justify-center mt-4 w-full mx-auto relative z-10">
 	
