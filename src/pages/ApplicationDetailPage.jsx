@@ -53,7 +53,7 @@ function ApplicationDetailPage() {
     </div>
   );
 
-  const infoClass = "text-sm text-gray-800 font-medium";
+  const infoClass = "text-sm text-black-800 font-medium";
   const labelClass = "text-xs text-gray-400 uppercase tracking-wider mb-1";
 
   return (
