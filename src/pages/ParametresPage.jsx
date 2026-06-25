@@ -121,7 +121,7 @@ function ParametresPage() {
     <div className="space-y-6">
       <div>
         <h1 className="flex justify-center mt-4 text-2xl font-bold text-gray-900">Paramètres</h1>
-        <p className="text-[#0D1B6E] text-base mt-2 font-medium">Gérez vos préférences et configurations</p>
+        <p className="text-[#0D1B6E] text-2xl mt-2 font-medium">Gérez vos préférences et configurations</p>
       </div>
 
       {/* Message succès */}

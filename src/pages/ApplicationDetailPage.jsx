@@ -74,7 +74,7 @@ function ApplicationDetailPage() {
 
       {/* Informations générales */}
       <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
-        <h2 className="text-base font-semibold text-gray-800 mb-5 pb-2 border-b border-gray-100">Informations générales</h2>
+        <h2 className="text-base font-semibold text-black-800 mb-5 pb-2 border-b border-gray-100">Informations générales</h2>
         <div className="grid grid-cols-3 gap-6">
           <div><p className={labelClass}>Nom</p><p className={infoClass}>{app.nomApplication}</p></div>
           <div><p className={labelClass}>Version</p><p className={infoClass}>{app.version}</p></div>
@@ -84,7 +84,7 @@ function ApplicationDetailPage() {
           <div><p className={labelClass}>Date de création</p><p className={infoClass}>{app.dateCreationFiche?.split('T')[0] || '—'}</p></div>
           <div><p className={labelClass}>Date de mise en service</p><p className={infoClass}>{app.dateMiseEnService || '—'}</p></div>
           <div><p className={labelClass}>Date d'obsolescence</p><p className={infoClass}>{app.dateObsolescence || '—'}</p></div>
-          <div className="col-span-3"><p className={labelClass}>Description</p><p className="text-sm text-gray-700 leading-relaxed">{app.description}</p></div>
+          <div className="col-span-3"><p className={labelClass}>Description</p><p className="text-sm text-black-700 leading-relaxed">{app.description}</p></div>
         </div>
       </div>
 
@@ -116,7 +116,7 @@ function ApplicationDetailPage() {
 
       {/* Équipes */}
       <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
-        <h2 className="text-base font-semibold text-gray-800 mb-5 pb-2 border-b border-gray-100">Équipes</h2>
+        <h2 className="text-base font-semibold text-black-800 mb-5 pb-2 border-b border-gray-100">Équipes</h2>
         <div className="grid grid-cols-2 gap-6">
           <div><p className={labelClass}>Équipe utilisatrice</p><p className={infoClass}>{app.equipeUtilisatrice?.nomEquipe || '—'}</p></div>
           <div><p className={labelClass}>Équipe responsable</p><p className={infoClass}>{app.equipeResponsable?.nomEquipe || '—'}</p></div>
@@ -127,7 +127,7 @@ function ApplicationDetailPage() {
       {!isLecteur && (
         <div className="bg-white rounded-xl border border-gray-100 shadow-sm">
           <div className="px-6 py-4 border-b border-gray-100">
-            <h2 className="text-base font-semibold text-gray-800">Historique des changements d'état</h2>
+            <h2 className="text-base font-semibold text-black-800">Historique des changements d'état</h2>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full">
@@ -143,16 +143,16 @@ function ApplicationDetailPage() {
               <tbody className="divide-y divide-gray-50">
                 {historique.length === 0 ? (
                   <tr>
-                    <td colSpan={4} className="text-center py-8 text-gray-400 text-sm">Aucun historique disponible</td>
+                    <td colSpan={4} className="text-center py-8 text-black-400 text-sm">Aucun historique disponible</td>
                   </tr>
                 ) : (
                   historique.map((h) => (
                     <tr key={h.idHistorique} className="hover:bg-[#F8FAFC] transition-colors">
-                      <td className="px-5 py-3 text-sm text-gray-600">{app.nomApplication}</td>
-                      <td className="px-5 py-3 text-sm text-gray-600">{h.ancienEtat}</td>
-                      <td className="px-5 py-3 text-sm text-gray-600">{h.nouvelEtat}</td>
-                      <td className="px-5 py-3 text-sm text-gray-600">{h.dateChangementEtat?.split('T')[0]}</td>
-                      <td className="px-5 py-3 text-sm text-gray-600">{h.utilisateur?.nomUtilisateur} {h.utilisateur?.prenomUtilisateur}</td>
+                      <td className="px-5 py-3 text-sm text-black-600">{app.nomApplication}</td>
+                      <td className="px-5 py-3 text-sm text-black-600">{h.ancienEtat}</td>
+                      <td className="px-5 py-3 text-sm text-black-600">{h.nouvelEtat}</td>
+                      <td className="px-5 py-3 text-sm text-black-600">{h.dateChangementEtat?.split('T')[0]}</td>
+                      <td className="px-5 py-3 text-sm text-black-600">{h.utilisateur?.nomUtilisateur} {h.utilisateur?.prenomUtilisateur}</td>
                     </tr>
                   ))
                 )}
@@ -166,11 +166,11 @@ function ApplicationDetailPage() {
       {showEtatModal && (
         <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
           <div className="bg-white rounded-2xl shadow-xl p-6 w-full max-w-md">
-            <h2 className="text-lg font-bold text-gray-900 mb-4">Changer l'état de l'application</h2>
+            <h2 className="text-lg font-bold text-black-900 mb-4">Changer l'état de l'application</h2>
             
             <div className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1.5">Nouvel état *</label>
+                <label className="block text-sm font-medium text-black-700 mb-1.5">Nouvel état *</label>
                 <select
                   value={nouvelEtat}
                   onChange={(e) => setNouvelEtat(e.target.value)}
@@ -186,7 +186,7 @@ function ApplicationDetailPage() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1.5">Date de mise en service</label>
+                <label className="block text-sm font-medium text-black-700 mb-1.5">Date de mise en service</label>
                 <input
                   type="date"
                   value={dateMiseEnService}
@@ -196,7 +196,7 @@ function ApplicationDetailPage() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1.5">Date d'obsolescence</label>
+                <label className="block text-sm font-medium text-black-700 mb-1.5">Date d'obsolescence</label>
                 <input
                   type="date"
                   value={dateObsolescence}

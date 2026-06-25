@@ -133,8 +133,8 @@ function UsersPage() {
               <th className="text-left px-5 py-3 text-xs font-semibold text-white uppercase tracking-wider">Actions</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-50">
-            
+          <tbody className="divide-y divide-black-50">
+
             {utilisateurs.length === 0 ? (
               <tr>
                 <td colSpan={6} className="text-center py-10 text-gray-400 text-sm">
@@ -144,11 +144,11 @@ function UsersPage() {
             ) : (
               utilisateurs.map((u) => (
                 <tr key={u.idUtilisateur} className="hover:bg-[#F8FAFC] transition-colors">
-                  <td className="px-5 py-3 text-sm font-medium text-gray-800">{u.nomUtilisateur}</td>
-                  <td className="px-5 py-3 text-sm text-gray-600">{u.prenomUtilisateur}</td>
-                  <td className="px-5 py-3 text-sm text-gray-600">{u.email}</td>
-                  <td className="px-5 py-3 text-sm text-gray-600">{u.role}</td>
-                  <td className="px-5 py-3 text-sm text-gray-600">{u.equipe?.nomEquipe || '—'}</td>
+                  <td className="px-5 py-3 text-sm font-medium text-black-800">{u.nomUtilisateur}</td>
+                  <td className="px-5 py-3 text-sm text-black-600">{u.prenomUtilisateur}</td>
+                  <td className="px-5 py-3 text-sm text-black-600">{u.email}</td>
+                  <td className="px-5 py-3 text-sm text-black-600">{u.role}</td>
+                  <td className="px-5 py-3 text-sm text-black-600">{u.equipe?.nomEquipe || '—'}</td>
                   <td className="px-5 py-3">
                     <button
                       onClick={() => handleDelete(u.idUtilisateur)}
@@ -163,7 +163,7 @@ function UsersPage() {
           </tbody>
         </table>
       </div>
-      <p className="text-gray-900 text-sm text-right mt-2">
+      <p className="text-black-900 text-sm text-right mt-2">
   {utilisateurs.length} utilisateur(s) enregistré(s)
 </p>
 

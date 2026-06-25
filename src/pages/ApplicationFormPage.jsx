@@ -60,14 +60,14 @@ function ApplicationFormPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="flex justify-center mt-4 text-2xl font-bold text-gray-900">Nouvelle application</h1>
-        <p className="text-[#0D1B6E] text-sm mt-1 font-medium">Remplissez les informations de la fiche application</p>
+        <h1 className="flex justify-center mt-4 text-2xl font-bold text-black-900">Nouvelle application</h1>
+        <p className="text-[#0D1B6E] text-2xl mt-1 font-medium">Remplissez les informations de la fiche application</p>
       </div>
 
       <form onSubmit={handleSubmit} className="bg-white rounded-xl border border-gray-100 shadow-sm p-6 space-y-6">
 
         <div>
-          <h2 className="text-base font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-100">Informations générales</h2>
+          <h2 className="text-base font-semibold text-black-800 mb-4 pb-2 border-b border-gray-100">Informations générales</h2>
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label className={labelClass}>Nom de l'application *</label>
@@ -85,7 +85,7 @@ function ApplicationFormPage() {
         </div>
 
         <div>
-          <h2 className="text-base font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-100">État et criticité</h2>
+          <h2 className="text-base font-semibold text-black-800 mb-4 pb-2 border-b border-gray-100">État et criticité</h2>
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label className={labelClass}>État *</label>
@@ -112,7 +112,7 @@ function ApplicationFormPage() {
         </div>
 
         <div>
-          <h2 className="text-base font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-100">Dates</h2>
+          <h2 className="text-base font-semibold text-black-800 mb-4 pb-2 border-b border-gray-100">Dates</h2>
           <div className="grid grid-cols-3 gap-4">
             <div>
               <label className={labelClass}>Date de création *</label>
@@ -130,7 +130,7 @@ function ApplicationFormPage() {
         </div>
 
         <div>
-          <h2 className="text-base font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-100">Classification</h2>
+          <h2 className="text-base font-semibold text-black-800 mb-4 pb-2 border-b border-gray-100">Classification</h2>
           <div className="grid grid-cols-3 gap-4">
             <div>
               <label className={labelClass}>Catégorie *</label>

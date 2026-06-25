@@ -71,17 +71,17 @@ function ApplicationsPage() {
           <tbody className="divide-y divide-gray-50">
             {filtered.length === 0 ? (
               <tr>
-                <td colSpan={6} className="text-center py-10 text-gray-400 text-sm">
+                <td colSpan={6} className="text-center py-10 text-black-400 text-sm">
                   Aucune application trouvée
                 </td>
               </tr>
             ) : (
               filtered.map((app) => (
-                <tr key={app.idApplication} className={`transition-colors ${ app.etat === 'Obsolète' ? 'bg-orange-50 hover:bg-orange-100' :app.etat === 'A décommissionner' ? 'bg-red-50 hover:bg-red-100' :'hover:bg-[#F8FAFC]'}`}>                  <td className="px-5 py-3 text-sm font-medium text-gray-800">{app.nomApplication}</td>
-                  <td className="px-5 py-3 text-sm text-gray-500">{app.version}</td>
-                  <td className="px-5 py-3 text-sm text-gray-600">{app.etat}</td>
-                  <td className="px-5 py-3 text-sm text-gray-600">{app.criticite}</td>
-                  <td className="px-5 py-3 text-sm text-gray-500">
+                <tr key={app.idApplication} className={`transition-colors ${ app.etat === 'Obsolète' ? 'bg-orange-50 hover:bg-orange-100' :app.etat === 'A décommissionner' ? 'bg-red-50 hover:bg-red-100' :'hover:bg-[#F8FAFC]'}`}>                  <td className="px-5 py-3 text-sm font-medium text-black-800">{app.nomApplication}</td>
+                  <td className="px-5 py-3 text-sm text-black-500">{app.version}</td>
+                  <td className="px-5 py-3 text-sm text-black-600">{app.etat}</td>
+                  <td className="px-5 py-3 text-sm text-black-600">{app.criticite}</td>
+                  <td className="px-5 py-3 text-sm text-black-500">
                     {app.categorie?.nomCategorie || '—'}
                   </td>
                   <td className="px-5 py-3">
@@ -98,7 +98,7 @@ function ApplicationsPage() {
         </table>
       </div>
 
-      <p className="text-gray-900 text-sm text-right mt-2">
+      <p className="text-black-900 text-sm text-right mt-2">
         {filtered.length} application(s) enregistrée(s)
       </p>
 

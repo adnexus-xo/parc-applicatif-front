@@ -220,10 +220,10 @@ function DashboardPage() {
               ) : (
                 recentApps.map((app) => (
                   <tr key={app.idApplication} className="hover:bg-[#F8FAFC] transition-colors">
-                    <td className="px-5 py-3 text-sm font-medium text-gray-800">{app.nomApplication}</td>
-                    <td className="px-5 py-3 text-sm text-gray-500">{app.version}</td>
-                    <td className="px-5 py-3 text-sm text-gray-600">{app.etat}</td>
-                    <td className="px-5 py-3 text-sm text-gray-600">{app.criticite}</td>
+                    <td className="px-5 py-3 text-sm font-medium text-black-800">{app.nomApplication}</td>
+                    <td className="px-5 py-3 text-sm text-black-500">{app.version}</td>
+                    <td className="px-5 py-3 text-sm text-black-600">{app.etat}</td>
+                    <td className="px-5 py-3 text-sm text-black-600">{app.criticite}</td>
                   </tr>
                 ))
               )}
