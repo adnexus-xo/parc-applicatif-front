@@ -54,7 +54,7 @@ function ApplicationDetailPage() {
   );
 
   const infoClass = "text-sm text-black-800 font-medium";
-  const labelClass = "text-xs text-gray-400 uppercase tracking-wider mb-1";
+  const labelClass = "text-xs text-black-900 uppercase tracking-wider mb-1";
 
   return (
     <div className="space-y-6">
