@@ -75,7 +75,7 @@ function ApplicationDetailPage() {
       {/* Informations générales */}
       <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
         <h2 className="text-base font-semibold text-black-800 mb-5 pb-2 border-b border-gray-100">Informations générales</h2>
-        <div className="grid grid-cols-3 gap-6">
+        <div className=" text-black grid grid-cols-3 gap-6">
           <div><p className={labelClass}>Nom</p><p className={infoClass}>{app.nomApplication}</p></div>
           <div><p className={labelClass}>Version</p><p className={infoClass}>{app.version}</p></div>
           <div><p className={labelClass}>État</p><p className={infoClass}>{app.etat}</p></div>
