@@ -168,7 +168,7 @@ function RapportsPage() {
             <div className="flex items-center justify-end gap-2 mt-2">
               <button
                 onClick={() => setShowInventaire(!showInventaire)}
-                className="flex items-center gap-2 px-4 py-2.5 border border-[#0D1B6E] text-[#0D1B6E] rounded-xl text-sm font-medium hover:bg-[#0D1B6E] hover:text-white transition-colors"
+                className="flex items-center gap-2 px-4 py-2.5 bg-[#0D1B6E] text-white rounded-xl text-sm font-medium hover:bg-[#E6BC00] transition-colors"
               >
                 {showInventaire ? <EyeOff size={15} /> : <Eye size={15} />}
                 {showInventaire ? 'Masquer' : 'Aperçu'}
@@ -205,7 +205,7 @@ function RapportsPage() {
             <div className="flex items-center justify-end gap-2 mt-2">
               <button
                 onClick={() => setShowSynthese(!showSynthese)}
-                className="flex items-center gap-2 px-4 py-2.5 border border-[#FFD100] text-[#0D1B6E] rounded-xl text-sm font-medium hover:bg-[#FFD100] transition-colors"
+                className="flex items-center gap-2 px-4 py-2.5 bg-[#FFD100] text-[#0D1B6E] rounded-xl text-sm font-medium hover:opacity-90 transition-colors"
               >
                 {showSynthese ? <EyeOff size={15} /> : <Eye size={15} />}
                 {showSynthese ? 'Masquer' : 'Aperçu'}
@@ -227,7 +227,7 @@ function RapportsPage() {
           </div>
         </div>
       )}
-      
+
       {isLecteur && (
         <div className="space-y-5">
           <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6 flex flex-col gap-4">
