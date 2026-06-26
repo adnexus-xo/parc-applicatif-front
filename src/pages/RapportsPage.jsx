@@ -117,8 +117,8 @@ function RapportsPage() {
       <table className="w-full">
         <thead>
           <tr className="bg-[#FFD100]">
-            <th className="text-left px-5 py-3 text-xs font-semibold text-white uppercase tracking-wider">Indicateur</th>
-            <th className="text-center px-5 py-3 text-xs font-semibold text-white uppercase tracking-wider">Valeur</th>
+            <th className="text-left px-5 py-3 text-xs font-semibold text-[#0D1B6E] uppercase tracking-wider">Indicateur</th>
+            <th className="text-center px-5 py-3 text-xs font-semibold text-[#0D1B6E] uppercase tracking-wider">Valeur</th>
           </tr>
         </thead>
         <tbody className="divide-y divide-gray-50">
