@@ -116,7 +116,7 @@ function RapportsPage() {
     <div className="overflow-x-auto">
       <table className="w-full">
         <thead>
-          <tr className="bg-[#0D1B6E]">
+          <tr className="bg-[#FFD100]">
             <th className="text-left px-5 py-3 text-xs font-semibold text-white uppercase tracking-wider">Indicateur</th>
             <th className="text-center px-5 py-3 text-xs font-semibold text-white uppercase tracking-wider">Valeur</th>
           </tr>
