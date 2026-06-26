@@ -188,7 +188,10 @@ function DashboardPage() {
             <BarChart data={byEquipe}>
               <CartesianGrid strokeDasharray="3 3" stroke="#F1F5F9" />
               <XAxis dataKey="name" tick={{ fontSize: 12 }} />
-              <YAxis tick={{ fontSize: 12 }} />
+              <YAxis
+              tick={{ fontSize: 12 }}
+              label={{ value: "Nombre d'applications", angle: -90, position: 'insideLeft', offset: 10, style: { fontSize: 11, fill: '#6B7280' } }}
+            />
               <Tooltip />
               <Bar dataKey="value" fill="#FFD100" radius={[6, 6, 0, 0]} />
             </BarChart>

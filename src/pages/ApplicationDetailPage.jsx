@@ -163,66 +163,85 @@ function ApplicationDetailPage() {
       )}
 
       {/* Modal changement d'état */}
-      {showEtatModal && (
-        <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
-          <div className="bg-white rounded-2xl shadow-xl p-6 w-full max-w-md">
-            <h2 className="text-lg font-bold text-black-900 mb-4">Changer l'état de l'application</h2>
-            
-            <div className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-black-700 mb-1.5">Nouvel état *</label>
-                <select
-                  value={nouvelEtat}
-                  onChange={(e) => setNouvelEtat(e.target.value)}
-                  className="w-full px-4 py-2.5 bg-[#F8FAFC] border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#FFD100]/20 focus:border-[#FFD100]"
-                >
-                  <option value="En projet">En projet</option>
-                  <option value="En service">En service</option>
-                  <option value="Obsolète">Obsolète</option>
-                  <option value="A décommissionner">À décommissionner</option>
-                  <option value="Retirée">Retirée</option>
-                  <option value="Abandonnée">Abandonnée</option>
-                </select>
-              </div>
+{showEtatModal && (
+  <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
+    <div className="bg-white rounded-2xl shadow-xl p-6 w-full max-w-md">
+      <h2 className="text-lg font-bold text-gray-900 mb-4">Changer l'état de l'application</h2>
 
-              <div>
-                <label className="block text-sm font-medium text-black-700 mb-1.5">Date de mise en service</label>
-                <input
-                  type="date"
-                  value={dateMiseEnService}
-                  onChange={(e) => setDateMiseEnService(e.target.value)}
-                  className="w-full px-4 py-2.5 bg-[#F8FAFC] border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#FFD100]/20 focus:border-[#FFD100]"
-                />
-              </div>
+      <div className="space-y-4">
 
-              <div>
-                <label className="block text-sm font-medium text-black-700 mb-1.5">Date d'obsolescence</label>
-                <input
-                  type="date"
-                  value={dateObsolescence}
-                  onChange={(e) => setDateObsolescence(e.target.value)}
-                  className="w-full px-4 py-2.5 bg-[#F8FAFC] border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#FFD100]/20 focus:border-[#FFD100]"
-                />
-              </div>
-            </div>
-
-            <div className="flex justify-end gap-3 mt-6">
-              <button
-                onClick={() => setShowEtatModal(false)}
-                className="px-5 py-2.5 rounded-xl border border-gray-200 text-sm font-medium text-gray-600 hover:bg-gray-50 transition-colors"
-              >
-                Annuler
-              </button>
-              <button
-                onClick={handleChangerEtat}
-                className="px-5 py-2.5 rounded-xl bg-[#FFD100] text-[#0D1B6E] text-sm font-medium hover:bg-[#E6BC00] transition-colors"
-              >
-                Confirmer
-              </button>
-            </div>
-          </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1.5">Nouvel état *</label>
+          <select
+            value={nouvelEtat}
+            onChange={(e) => {
+              setNouvelEtat(e.target.value);
+              setDateMiseEnService('');
+              setDateObsolescence('');
+            }}
+            className="w-full px-4 py-2.5 bg-[#F8FAFC] border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#FFD100]/20 focus:border-[#FFD100]"
+          >
+            <option value="">Sélectionner un état</option>
+            <option value="En projet">En projet</option>
+            <option value="En service">En service</option>
+            <option value="Obsolète">Obsolète</option>
+            <option value="A décommissionner">À décommissionner</option>
+            <option value="Retirée">Retirée</option>
+            <option value="Abandonnée">Abandonnée</option>
+          </select>
         </div>
-      )}
+
+        {nouvelEtat === 'En service' && (
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1.5">
+              Date de mise en service *
+            </label>
+            <input
+              type="date"
+              value={dateMiseEnService}
+              onChange={(e) => setDateMiseEnService(e.target.value)}
+              className="w-full px-4 py-2.5 bg-[#F8FAFC] border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#FFD100]/20 focus:border-[#FFD100]"
+            />
+          </div>
+        )}
+
+        {(nouvelEtat === 'Obsolète' || nouvelEtat === 'A décommissionner') && (
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1.5">
+              Date d'obsolescence *
+            </label>
+            <input
+              type="date"
+              value={dateObsolescence}
+              onChange={(e) => setDateObsolescence(e.target.value)}
+              className="w-full px-4 py-2.5 bg-[#F8FAFC] border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#FFD100]/20 focus:border-[#FFD100]"
+            />
+          </div>
+        )}
+
+        {(nouvelEtat === 'En projet' || nouvelEtat === 'Retirée' || nouvelEtat === 'Abandonnée') && (
+          <p className="text-sm text-gray-400 italic">Aucune date supplémentaire requise pour cet état.</p>
+        )}
+      </div>
+
+      <div className="flex justify-end gap-3 mt-6">
+        <button
+          onClick={() => { setShowEtatModal(false); setNouvelEtat(''); setDateMiseEnService(''); setDateObsolescence(''); }}
+          className="px-5 py-2.5 rounded-xl border border-gray-200 text-sm font-medium text-gray-600 hover:bg-gray-50 transition-colors"
+        >
+          Annuler
+        </button>
+        <button
+          onClick={handleChangerEtat}
+          disabled={!nouvelEtat}
+          className="px-5 py-2.5 rounded-xl bg-[#FFD100] text-[#0D1B6E] text-sm font-medium hover:bg-[#E6BC00] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          Confirmer
+        </button>
+      </div>
+    </div>
+  </div>
+)}  
     </div>
   );
 }
